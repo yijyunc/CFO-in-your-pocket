@@ -2,7 +2,20 @@ import React, { useState, useEffect } from 'react';
 import MetricCard from '../components/MetricCard';
 import Gauge from '../components/Gauge';
 import InsightText from '../components/InsightText';
-import { DollarSign, TrendingDown, Calendar, Users, Play, RotateCcw } from 'lucide-react';
+import { 
+  DollarSign, 
+  TrendingDown, 
+  Calendar, 
+  Users, 
+  Play, 
+  RotateCcw,
+  Zap,
+  Calculator,
+  Target,
+  Lightbulb,
+  ArrowRight,
+  TrendingUp
+} from 'lucide-react';
 
 const Simulate = ({ data, onApplyChanges, showToast }) => {
   const [burnChange, setBurnChange] = useState(0); // -30% to +30%
@@ -55,27 +68,34 @@ const Simulate = ({ data, onApplyChanges, showToast }) => {
 
   return (
     <div className="space-y-8">
-      {/* Header */}
-      <div className="flex items-center justify-between">
-        <div>
-          <h2 className="text-2xl font-bold text-gray-900">Scenario Simulator</h2>
-          <p className="text-gray-600 mt-1">Model different scenarios and see the impact on your runway</p>
-        </div>
-        <div className="flex space-x-3">
-          <button
-            onClick={handleReset}
-            className="flex items-center space-x-2 px-4 py-2 text-gray-600 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors duration-200"
-          >
-            <RotateCcw className="w-4 h-4" />
-            <span>Reset</span>
-          </button>
-          <button
-            onClick={handleApply}
-            className="flex items-center space-x-2 px-4 py-2 bg-primary text-white hover:bg-blue-600 rounded-lg transition-colors duration-200"
-          >
-            <Play className="w-4 h-4" />
-            <span>Apply to Dashboard</span>
-          </button>
+      {/* Enhanced Header */}
+      <div className="bg-gradient-to-r from-brand-50 to-purple-50 rounded-2xl p-8 border border-brand-200">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center space-x-4">
+            <div className="p-4 bg-brand-100 rounded-2xl">
+              <Calculator className="w-8 h-8 text-brand-600" />
+            </div>
+            <div>
+              <h2 className="text-2xl font-bold text-slate-900">Predictive Scenario Engine</h2>
+              <p className="text-slate-600 mt-1">CFO-level modeling for strategic decision making</p>
+            </div>
+          </div>
+          <div className="flex space-x-4">
+            <button
+              onClick={handleReset}
+              className="btn-secondary flex items-center space-x-2"
+            >
+              <RotateCcw className="w-4 h-4" />
+              <span>Reset</span>
+            </button>
+            <button
+              onClick={handleApply}
+              className="btn-primary flex items-center space-x-2"
+            >
+              <Play className="w-4 h-4" />
+              <span>Apply Changes</span>
+            </button>
+          </div>
         </div>
       </div>
 

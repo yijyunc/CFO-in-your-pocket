@@ -82,7 +82,7 @@ const AppContent = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 flex">
+    <div className="min-h-screen bg-slate-50 flex">
       {/* Sidebar */}
       <Sidebar />
       
