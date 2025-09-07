@@ -56,7 +56,7 @@ const Gauge = ({ score, className = '', size = 'large', showDetails = true }) =>
     <div className={`gauge-container ${className}`}>
       <div className={`relative ${containerSize} mx-auto`}>
         {/* Outer glow effect */}
-        <div className={`absolute inset-0 rounded-full bg-gradient-to-br ${gradient} opacity-10 blur-xl`} />
+        <div className={`absolute inset-0 rounded-full bg-gradient-to-br ${getScoreGradient(score)} opacity-10 blur-xl`} />
         
         {/* Main gauge */}
         <svg className="w-full h-full transform -rotate-90 relative z-10" viewBox={viewBox}>
