@@ -7,7 +7,6 @@ import {
   TrendingDown, 
   Calendar, 
   TrendingUp,
-  AlertTriangle,
   Target,
   Activity,
   BarChart3,
@@ -80,7 +79,6 @@ const Dashboard = ({ data }) => {
     { month: 'Jun', cash: 260000, burn: 65000 },
   ];
 
-  const currentMonth = monthlyData[monthlyData.length - 1];
 
   if (isLoading) {
     return (

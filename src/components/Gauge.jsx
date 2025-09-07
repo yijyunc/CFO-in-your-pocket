@@ -39,7 +39,6 @@ const Gauge = ({ score, className = '', size = 'large', showDetails = true }) =>
   };
 
   const color = getScoreColor(score);
-  const gradient = getScoreGradient(score);
   const status = getScoreStatus(score);
   const StatusIcon = status.icon;
   

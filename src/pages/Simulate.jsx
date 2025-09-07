@@ -9,11 +9,7 @@ import {
   Users, 
   Play, 
   RotateCcw,
-  Zap,
   Calculator,
-  Target,
-  Lightbulb,
-  ArrowRight,
   TrendingUp
 } from 'lucide-react';
 
